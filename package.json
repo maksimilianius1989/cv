@@ -1,0 +1,23 @@
+{
+  "name": "telegram_cv",
+  "version": "1.0.0",
+  "description": "Generate CV by Telegram Bot",
+  "license": "ISC",
+  "author": "Bukach Maksym",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/cv.ts",
+    "build": "tsc && cp -r src/templates dist/"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.9",
+    "puppeteer": "^24.41.0"
+  },
+  "devDependencies": {
+    "@types/handlebars": "^4.0.40",
+    "@types/node": "^25.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}

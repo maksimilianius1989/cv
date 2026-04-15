@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 40px;
+}
+
+h1 { color: #38bdf8; }
+.role { color: #94a3b8; }
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.badge {
+  background: #334155;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 5px;
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+
+<h1>{{name}}</h1>
+<div class="role">{{role}}</div>
+
+<div class="card">
+  <h2>Skills</h2>
+  {{#each skills}}
+    <span class="badge">{{this}}</span>
+  {{/each}}
+</div>
+
+<div class="card">
+  <h2>Experience</h2>
+  {{#each experience}}
+    <p>• <b>{{company}}</b> — {{position}}</p>
+  {{/each}}
+</div>
+
+</body>
+</html>

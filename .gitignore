@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Output files (PDF, HTML CV)
+*.pdf
+*.html
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+
+# Puppeteer / Chromium cache
+.cache/
+.puppeteer/
+
+# Coverage (якщо будеш тестити)
+coverage/
+
+# Optional
+tmp/
+temp/

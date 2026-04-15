@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+body {
+  margin: 0;
+  font-family: Inter, Arial;
+  display: flex;
+  background: #fff;
+  color: #111;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+  width: 30%;
+  background: #0f172a;
+  color: white;
+  padding: 30px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.role {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* sections */
+.section-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+/* skills */
+.badge {
+  display: inline-block;
+  background: #1e293b;
+  padding: 5px 8px;
+  margin: 3px 2px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* RIGHT CONTENT */
+.main {
+  width: 70%;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #0f172a;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.job {
+  margin-bottom: 15px;
+}
+
+.company {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 12px;
+  color: gray;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+  <div class="name">{{name}}</div>
+  <div class="role">{{role}}</div>
+
+  <div class="section-title">CONTACT</div>
+  <div>{{email}}</div>
+  <div>{{phone}}</div>
+
+  <div class="section-title">SKILLS</div>
+  {{#each skills}}
+    <div class="badge">{{this}}</div>
+  {{/each}}
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <h2>ABOUT</h2>
+  <p>{{about}}</p>
+
+  <h2>EXPERIENCE</h2>
+
+  {{#each experience}}
+  <div class="job">
+    <div class="company">{{company}} — {{position}}</div>
+    <div class="date">{{date}}</div>
+    <p>{{description}}</p>
+  </div>
+  {{/each}}
+
+  <h2>EDUCATION</h2>
+
+  {{#each education}}
+  <div class="job">
+    <div class="company">{{school}}</div>
+    <div class="date">{{year}}</div>
+  </div>
+  {{/each}}
+
+</div>
+
+</body>
+</html>
